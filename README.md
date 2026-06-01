@@ -16,7 +16,7 @@ Chrome 扩展，一键提取网页正文，保存为 Markdown 文件。
 1. 打开 Chrome → `chrome://extensions/`
 2. 右上角打开「开发者模式」
 3. 点击「加载已解压的扩展程序」
-4. 选择本文件夹 `mandu-extension/`
+4. 选择本文件夹 `肘子文章提取器/`
 
 ## 使用
 
@@ -31,7 +31,7 @@ Chrome 扩展，一键提取网页正文，保存为 Markdown 文件。
 ## 目录结构
 
 ```
-mandu-extension/
+肘子文章提取器/
 ├── manifest.json          # Chrome 扩展配置（Manifest V3）
 ├── content.js             # 正文提取 + 转 Markdown
 ├── background.js          # 后台服务工作者
