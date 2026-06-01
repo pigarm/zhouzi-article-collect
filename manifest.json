@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "肘子牌文章提取器",
+  "version": "1.0",
+  "description": "一键提取网页正文，保存为 Markdown 文件",
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "downloads",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "保存页面到肘子"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["lib/Readability.js", "lib/turndown.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
